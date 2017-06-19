@@ -2,11 +2,13 @@ function MoviesController() {
   this.favorites = [{
     title: 'Matrix',
     year: '1999',
-    popular: true
+    popular: true,
+    category: 'ciencia ficción'
   },{
     title: 'Salvando al Soldando Ryan',
     year: '1998',
-    popular: false
+    popular: false,
+    category: 'acción'
   },{
     title: 'Marte',
     year: '2015',
@@ -14,7 +16,8 @@ function MoviesController() {
   },{
     title: 'El Padrino',
     year: '1972',
-    popular: true
+    popular: true,
+    category: 'mafia'
   }];
 }
 
@@ -25,9 +28,12 @@ angular
 
 
 //* Lógica explicada con Toggle jQuery
-// var element = $('.shome-element');
-// if (condition) {
-//   element.show();
-// } else {
-//   element.hide();
+// var thing = <dynamicValue>;
+// switch (thing) {
+//  case 'A':
+//   // hacer algo
+//  case 'B':
+//   // hacer algo
+// default:
+//   // hacer algo por defecto
 // }

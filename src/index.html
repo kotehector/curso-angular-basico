@@ -14,7 +14,7 @@
 
   <body class="app">
 
-    <h1>ng-if</h1>
+    <h1>ng-switch</h1>
 
     <div ng-controller="MoviesController as movies">
       <ul>
@@ -28,6 +28,20 @@
           <p ng-if="movie.year > '2000'">
             Esta peli es nueva.
           </p>
+          <div ng-switch="movie.category">
+            <div ng-switch-when="ciencia ficción">
+              Peli de CIENCIA FICCIÓN
+            </div>
+            <div ng-switch-when="acción">
+              Peli de ACCIÓN
+            </div>
+            <div ng-switch-when="mafia">
+              Peli de SUSPENSE
+            </div>
+            <div ng-switch-default>
+              Peli sin categoría
+            </div>
+          </div>
         </li>
       </ul>
     </div>
