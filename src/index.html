@@ -9,16 +9,27 @@
     <!-- inject:css -->
     <!-- endinject -->
     <link rel="stylesheet" href="css/myapp.css">
-
+    <style>
+      .old {background: red;} /* 1995 < */
+      .modern {background: green;} /*  1995 > && < 2000 */
+      .new {background: blue;} /* > 2000 */
+    </style>
   </head>
 
   <body class="app">
 
-    <h1>ng-switch</h1>
+    <h1>ng-class</h1>
 
     <div ng-controller="MoviesController as movies">
       <ul>
-        <li ng-repeat="movie in movies.favorites">
+        <!-- ng-class="movie.year < 1995 ? 'old' : 'modern'" -->
+        <li
+          ng-class="{
+            old: movie.year < 1995,
+            modern: movie.year > 1995 && movie.year < 2000,
+            new: movie.year > 2000
+          }"
+          ng-repeat="movie in movies.favorites">
           <p>{{ movie.title }} <span>{{ $index }}</span></p>
           <p>Estreno: {{ movie.year }}</p>
           <p ng-if="!movie.popular"> Esta peli es muy popular.</p>

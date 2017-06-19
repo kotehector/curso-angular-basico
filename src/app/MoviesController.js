@@ -27,13 +27,12 @@ angular
 
 
 
-//* Lógica explicada con Toggle jQuery
-// var thing = <dynamicValue>;
-// switch (thing) {
-//  case 'A':
-//   // hacer algo
-//  case 'B':
-//   // hacer algo
-// default:
-//   // hacer algo por defecto
-// }
+//* Lógica explicada con Javascript
+// var element = $('.some-element');
+// if (condicion) {
+//  element.addClass('x')
+//  } else if (condicion) {
+//  element.addClass('y')
+//  } else if (condicion) {
+//  element.addClass('z')
+//  }
