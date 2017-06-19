@@ -3,21 +3,29 @@ function MoviesController() {
     title: 'Matrix',
     year: '1999',
     popular: true,
-    category: 'ciencia ficción'
+    category: 'ciencia ficción',
+    imdb: 'tt0111161',
+    img: 'M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_UX182_CR0,0,182,268_AL_.jpg'
   },{
-    title: 'Salvando al Soldando Ryan',
-    year: '1998',
+    title: 'Cadena Perpetua',
+    year: '1994',
     popular: false,
-    category: 'acción'
+    category: 'acción',
+    imdb: 'tt0111161',
+    img: 'M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_UX182_CR0,0,182,268_AL_.jpg'
   },{
     title: 'Marte',
     year: '2015',
-    popular: false
+    popular: false,
+    imdb: 'tt0111161',
+    img: 'M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_UX182_CR0,0,182,268_AL_.jpg'
   },{
     title: 'El Padrino',
     year: '1972',
     popular: true,
-    category: 'mafia'
+    category: 'mafia',
+    imdb: 'tt0111161',
+    img: 'M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_UX182_CR0,0,182,268_AL_.jpg'
   }];
 }
 

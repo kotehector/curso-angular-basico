@@ -18,7 +18,7 @@
 
   <body class="app">
 
-    <h1>ng-class</h1>
+    <h1>ng-src / ng-href</h1>
 
     <div ng-controller="MoviesController as movies">
       <ul>
@@ -29,6 +29,10 @@
             new: movie.year > 2000
           }"
           ng-repeat="movie in movies.favorites">
+          <img ng-src="//ia.media-imdb.com/images/{{movie.img}}" alt="">
+          <a ng-href="//imdb.com/title/{{movie.imdb}}" target="_blank">
+            {{ movie.title }}
+          </a>
           <p>{{ movie.title }} <span>{{ $index }}</span></p>
           <p>Estreno: {{ movie.year }}</p>
           <input type="text" ng-model="movie.year">
