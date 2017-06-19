@@ -1,9 +1,6 @@
-function MainController(a, b) {
-  a.name = "Samelan";
-  a.countries = ['Francia', 'Brasil'];
+function MainController() {
+  this.name = "Samelan";
 }
-
-MainController.$inject = ['$scope', '$rootScope'];
 
 angular
   .module('app')

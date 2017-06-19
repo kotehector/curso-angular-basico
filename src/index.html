@@ -16,9 +16,16 @@
 
     <h1>Bienvenidos al Curso Angular Fundamentals</h1>
 
-    <div ng-controller="MainController">
-      {{ name }}
+    <div ng-controller="MainController as main">
+      {{ main.name }}
     </div>
+
+    <!-- <div ng-controller="MainController as main">
+      {{ name }}
+      <div ng-controller="anotherController as another">
+        {{ main.name }} {{ another.name }}
+      </div>
+    </div> -->
 
 
     <!-- inject:js -->
