@@ -14,18 +14,18 @@
 
   <body class="app">
 
-    <h1>ng-show / ng-hide </h1>
+    <h1>ng-if</h1>
 
     <div ng-controller="MoviesController as movies">
       <ul>
         <li ng-repeat="movie in movies.favorites">
           <p>{{ movie.title }} <span>{{ $index }}</span></p>
           <p>Estreno: {{ movie.year }}</p>
-          <p ng-hide="!movie.popular"> Esta peli es muy popular.</p>
-          <p ng-show="movie.year < '2000'">
+          <p ng-if="!movie.popular"> Esta peli es muy popular.</p>
+          <p ng-if="movie.year < '2000'">
             Esta peli ya es bastante vieja.
           </p>
-          <p ng-show="movie.year > '2000'">
+          <p ng-if="movie.year > '2000'">
             Esta peli es nueva.
           </p>
         </li>
