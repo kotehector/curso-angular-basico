@@ -14,25 +14,23 @@
 
   <body class="app">
 
-    <h1>Bienvenidos al Curso Angular Básico</h1>
+    <h1>ng-show / ng-hide </h1>
 
     <div ng-controller="MoviesController as movies">
       <ul>
         <li ng-repeat="movie in movies.favorites">
-          <!-- <p>Matrix</p>
-          <p>Estreno: 1999</p> -->
           <p>{{ movie.title }} <span>{{ $index }}</span></p>
-          <p>Esteno: {{ movie.year }}</p>
+          <p>Estreno: {{ movie.year }}</p>
+          <p ng-hide="!movie.popular"> Esta peli es muy popular.</p>
+          <p ng-show="movie.year < '2000'">
+            Esta peli ya es bastante vieja.
+          </p>
+          <p ng-show="movie.year > '2000'">
+            Esta peli es nueva.
+          </p>
         </li>
       </ul>
     </div>
-
-    <!-- <div ng-controller="MainController as main">
-      {{ name }}
-      <div ng-controller="anotherController as another">
-        {{ main.name }} {{ another.name }}
-      </div>
-    </div> -->
 
 
     <!-- inject:js -->
