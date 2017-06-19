@@ -14,10 +14,17 @@
 
   <body class="app">
 
-    <h1>Bienvenidos al Curso Angular Fundamentals</h1>
+    <h1>Bienvenidos al Curso Angular Básico</h1>
 
-    <div ng-controller="MainController as main">
-      {{ main.name }}
+    <div ng-controller="MoviesController as movies">
+      <ul>
+        <li ng-repeat="movie in movies.favorites">
+          <!-- <p>Matrix</p>
+          <p>Estreno: 1999</p> -->
+          <p>{{ movie.title }} <span>{{ $index }}</span></p>
+          <p>Esteno: {{ movie.year }}</p>
+        </li>
+      </ul>
     </div>
 
     <!-- <div ng-controller="MainController as main">
@@ -33,7 +40,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/MainController.js"></script>
+    <script src="app/MoviesController.js"></script>
     <!-- endinject -->
   </body>
 </html>
