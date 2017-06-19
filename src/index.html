@@ -22,7 +22,6 @@
 
     <div ng-controller="MoviesController as movies">
       <ul>
-        <!-- ng-class="movie.year < 1995 ? 'old' : 'modern'" -->
         <li
           ng-class="{
             old: movie.year < 1995,
@@ -32,6 +31,7 @@
           ng-repeat="movie in movies.favorites">
           <p>{{ movie.title }} <span>{{ $index }}</span></p>
           <p>Estreno: {{ movie.year }}</p>
+          <input type="text" ng-model="movie.year">
           <p ng-if="!movie.popular"> Esta peli es muy popular.</p>
           <p ng-if="movie.year < '2000'">
             Esta peli ya es bastante vieja.
