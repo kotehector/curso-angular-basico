@@ -16,6 +16,18 @@
     <h1>ng-click</h1>
 
     <div ng-controller="MoviesController as movies">
+      <form ng-submit="movies.addMovie();">
+        <p>Añadir nueva película</p>
+        <input  type="text"
+                placeholder="Título"
+                ng-model="movies.newTitle">
+        <input  type="text"
+                placeholder="Estreno"
+                ng-model="movies.newDate">
+                <button type="submit">
+                  Añadir Peli
+                </button>
+      </form>
       <div class="likes">
         <p>Lista de favoritos</p>
         <ul>
