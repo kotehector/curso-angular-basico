@@ -2,6 +2,9 @@ function MoviesController() {
   this.newTitle = '';
   this.newDate = '';
   this.likesList = [];
+  this.onChange = function() {
+    console.log('Change!', this.newTitle );
+  }
   this.onFocus = function() {
     console.log('Focus!');
   }
