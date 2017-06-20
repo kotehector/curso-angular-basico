@@ -20,9 +20,13 @@
         <p>Añadir nueva película</p>
         <input  type="text"
                 placeholder="Título"
+                ng-focus="movies.onFocus();"
+                ng-blur="movies.onBlur();"
                 ng-model="movies.newTitle">
         <input  type="text"
                 placeholder="Estreno"
+                ng-focus="movies.onFocus();"
+                ng-blur="movies.onBlur();"
                 ng-model="movies.newDate">
                 <button type="submit">
                   Añadir Peli
