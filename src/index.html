@@ -9,54 +9,29 @@
     <!-- inject:css -->
     <!-- endinject -->
     <link rel="stylesheet" href="css/myapp.css">
-    <style>
-      .old {background: red;} /* 1995 < */
-      .modern {background: green;} /*  1995 > && < 2000 */
-      .new {background: blue;} /* > 2000 */
-    </style>
   </head>
 
   <body class="app">
 
-    <h1>ng-src / ng-href</h1>
+    <h1>ng-click</h1>
 
     <div ng-controller="MoviesController as movies">
+      <div class="likes">
+        <p>Lista de favoritos</p>
+        <ul>
+          <li ng-repeat="like in movies.likesList">
+            <p>{{ like.title }}</p>
+            <a href="" ng-click="movies.removeToLikes($index);">Borrar de la lista de favoritos</a>
+          </li>
+        </ul>
+      </div>
       <ul>
-        <li
-          ng-class="{
-            old: movie.year < 1995,
-            modern: movie.year > 1995 && movie.year < 2000,
-            new: movie.year > 2000
-          }"
-          ng-repeat="movie in movies.favorites">
-          <img ng-src="//ia.media-imdb.com/images/{{movie.img}}" alt="">
-          <a ng-href="//imdb.com/title/{{movie.imdb}}" target="_blank">
-            {{ movie.title }}
-          </a>
-          <p>{{ movie.title }} <span>{{ $index }}</span></p>
+        <li ng-repeat="movie in movies.favorites">
+          <p>{{ movie.title }}</p>
           <p>Estreno: {{ movie.year }}</p>
-          <input type="text" ng-model="movie.year">
-          <p ng-if="!movie.popular"> Esta peli es muy popular.</p>
-          <p ng-if="movie.year < '2000'">
-            Esta peli ya es bastante vieja.
-          </p>
-          <p ng-if="movie.year > '2000'">
-            Esta peli es nueva.
-          </p>
-          <div ng-switch="movie.category">
-            <div ng-switch-when="ciencia ficción">
-              Peli de CIENCIA FICCIÓN
-            </div>
-            <div ng-switch-when="acción">
-              Peli de ACCIÓN
-            </div>
-            <div ng-switch-when="mafia">
-              Peli de SUSPENSE
-            </div>
-            <div ng-switch-default>
-              Peli sin categoría
-            </div>
-          </div>
+          <a href="" ng-click="movies.addToLikes(movie);">
+            Like this movie!
+          </a>
         </li>
       </ul>
     </div>

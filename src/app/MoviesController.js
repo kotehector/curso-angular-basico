@@ -1,4 +1,11 @@
 function MoviesController() {
+  this.likesList = [];
+  this.addToLikes = function(movie) {
+      this.likesList.push(movie);
+  }
+  this.removeToLikes = function(index) {
+    this.likesList.splice(index, 1);
+  }
   this.favorites = [{
     title: 'Matrix',
     year: '1999',
