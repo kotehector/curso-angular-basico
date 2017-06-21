@@ -14,33 +14,13 @@
 
   <body class="app">
 
-    <h1>Filtro de Fechas</h1>
+    <h1>Filtro de Monedas</h1>
 
     <div ng-controller="MainController as main">
 
       <!-- formato corto -->
-      <p>{{ main.myDate | date: 'short' }}</p>
-      <!-- formato largo -->
-      <p>{{ main.myDate | date: 'medium' }}</p>
+      <p>{{ main.myAmmount | currency: '€ ' : 0 }}</p>
 
-      <!-- dia -->
-      <p>{{ main.myDate | date: 'EEEE' }}</p>
-      <!-- mes -->
-      <p>{{ main.myDate | date: 'MMM' }}</p>
-      <!-- año -->
-      <p>{{ main.myDate | date: 'yyyy' }}</p>
-
-      <!-- horas -->
-      <p>{{ main.myDate | date: 'hh' }}</p>
-
-      <!-- minutos -->
-      <p>{{ main.myDate | date: 'mm' }}</p>
-
-      <!-- segundos -->
-      <p>{{ main.myDate | date: 'ss' }}</p>
-
-      <!-- combinado -->
-      <p>{{ main.myDate | date: 'EEEE MMM, yyyy hh:mm:ss' }}</p>
 
     </div>
 

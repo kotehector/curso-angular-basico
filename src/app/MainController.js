@@ -1,5 +1,5 @@
 function MainController() {
-  this.myDate = 1436745862731;
+  this.myAmmount = 3480.75;
 }
 
 angular
