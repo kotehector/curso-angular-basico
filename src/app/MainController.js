@@ -1,12 +1,5 @@
 function MainController() {
-  this.name = "Samelan";
-
-  this.myObject = {
-    'one': 'Hola',
-    'two': 'Adiós'
-  };
-
-  this.myArray = ['Esto', 'es', 'un', 'array'];
+  this.myDate = 1436745862731;
 }
 
 angular

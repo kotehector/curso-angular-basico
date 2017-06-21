@@ -14,31 +14,33 @@
 
   <body class="app">
 
-    <h1>in deppth expressions</h1>
-
-
+    <h1>Filtro de Fechas</h1>
 
     <div ng-controller="MainController as main">
-      <!-- string -->
-      <p> {{ main.name }} </p>
 
-      <!-- objeto -->
-      <a href="" ng-click="myKey = 'one'">
-        Saludo
-      </a>
-      <a href="" ng-click="myKey = 'two'">
-        Despedida
-      </a>
-      <p> {{ main.myObject[myKey] }} </p>
+      <!-- formato corto -->
+      <p>{{ main.myDate | date: 'short' }}</p>
+      <!-- formato largo -->
+      <p>{{ main.myDate | date: 'medium' }}</p>
 
-      <!-- Array -->
-      <p> {{ main.myArray.length }} </p>
+      <!-- dia -->
+      <p>{{ main.myDate | date: 'EEEE' }}</p>
+      <!-- mes -->
+      <p>{{ main.myDate | date: 'MMM' }}</p>
+      <!-- año -->
+      <p>{{ main.myDate | date: 'yyyy' }}</p>
 
-      <!-- Matemáticas -->
-      <p> {{ (2 + 2) * 4 / 16 * 200  }} </p>
+      <!-- horas -->
+      <p>{{ main.myDate | date: 'hh' }}</p>
 
-      <!-- filtros -->
-      <p> {{ main.name | uppercase }}</p>
+      <!-- minutos -->
+      <p>{{ main.myDate | date: 'mm' }}</p>
+
+      <!-- segundos -->
+      <p>{{ main.myDate | date: 'ss' }}</p>
+
+      <!-- combinado -->
+      <p>{{ main.myDate | date: 'EEEE MMM, yyyy hh:mm:ss' }}</p>
 
     </div>
 
