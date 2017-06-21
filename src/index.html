@@ -14,33 +14,15 @@
 
   <body class="app">
 
-    <h1>Filtrar y ordenar una lista</h1>
+    <h1>JSON debug</h1>
 
-    <div ng-controller="MainController as movies">
-      <a href="" ng-click="type = 'year' ">Año</a>
-      <a href="" ng-click="type = 'title' ">Titulo</a>
-      <div ng-repeat="movie in movies.favorites | orderBy: type : true ">
-          <p>{{ movie.title }}</p>
-          <p>{{ movie.year }}</p>
-      </div>
+    <div ng-controller="MainController as main">
 
-      <hr>
       <input type="text"
-            placeholder="Buscar"
-            ng-model="buscar">
-      <div ng-repeat="movie in movies.favorites | filter: buscar ">
-          <p>{{ movie.title }}</p>
-          <p>{{ movie.year }}</p>
-      </div>
-
-      <hr>
-      <input type="text"
-            placeholder="Buscar por año"
-            ng-model="fecha">
-      <div ng-repeat="movie in movies.favorites | filter: { year : fecha } ">
-          <p>{{ movie.title }}</p>
-          <p>{{ movie.year }}</p>
-      </div>
+            placeholder="Ciudad"
+            ng-model="main.person.city">
+      <pre>{{ main.person | json }}</pre>
+      
     </div>
 
 
