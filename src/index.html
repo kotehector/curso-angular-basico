@@ -14,15 +14,36 @@
 
   <body class="app">
 
-    <h1>Filtro de Monedas</h1>
+    <h1>Filtrar y ordenar una lista</h1>
 
-    <div ng-controller="MainController as main">
+    <div ng-controller="MainController as movies">
+      <a href="" ng-click="type = 'year' ">Año</a>
+      <a href="" ng-click="type = 'title' ">Titulo</a>
+      <div ng-repeat="movie in movies.favorites | orderBy: type : true ">
+          <p>{{ movie.title }}</p>
+          <p>{{ movie.year }}</p>
+      </div>
 
-      <!-- formato corto -->
-      <p>{{ main.myAmmount | currency: '€ ' : 0 }}</p>
+      <hr>
+      <input type="text"
+            placeholder="Buscar"
+            ng-model="buscar">
+      <div ng-repeat="movie in movies.favorites | filter: buscar ">
+          <p>{{ movie.title }}</p>
+          <p>{{ movie.year }}</p>
+      </div>
 
-
+      <hr>
+      <input type="text"
+            placeholder="Buscar por año"
+            ng-model="fecha">
+      <div ng-repeat="movie in movies.favorites | filter: { year : fecha } ">
+          <p>{{ movie.title }}</p>
+          <p>{{ movie.year }}</p>
+      </div>
     </div>
+
+
 
 
     <!-- inject:js -->
