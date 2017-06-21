@@ -14,18 +14,33 @@
 
   <body class="app">
 
-    <h1>Bienvenidos al Curso Angular Fundamentals</h1>
+    <h1>in deppth expressions</h1>
+
+
 
     <div ng-controller="MainController as main">
-      {{ main.name }}
-    </div>
+      <!-- string -->
+      <p> {{ main.name }} </p>
 
-    <!-- <div ng-controller="MainController as main">
-      {{ name }}
-      <div ng-controller="anotherController as another">
-        {{ main.name }} {{ another.name }}
-      </div>
-    </div> -->
+      <!-- objeto -->
+      <a href="" ng-click="myKey = 'one'">
+        Saludo
+      </a>
+      <a href="" ng-click="myKey = 'two'">
+        Despedida
+      </a>
+      <p> {{ main.myObject[myKey] }} </p>
+
+      <!-- Array -->
+      <p> {{ main.myArray.length }} </p>
+
+      <!-- Matemáticas -->
+      <p> {{ (2 + 2) * 4 / 16 * 200  }} </p>
+
+      <!-- filtros -->
+      <p> {{ main.name | uppercase }}</p>
+
+    </div>
 
 
     <!-- inject:js -->
