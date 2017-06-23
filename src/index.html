@@ -14,15 +14,15 @@
 
   <body class="app">
 
-    <h1>JSON debug</h1>
+    <h1>$http y unir la respuesta a la Vista</h1>
 
     <div ng-controller="MainController as main">
 
-      <input type="text"
-            placeholder="Ciudad"
-            ng-model="main.person.city">
-      <pre>{{ main.person | json }}</pre>
-      
+      <form ng-submit="main.getUser()">
+        <input type="text" ng-model="main.userId">
+        <button type="submit">Buscar</button>
+      </form>
+      <pre>{{ main.chosenUser | json }}</pre>
     </div>
 
 
