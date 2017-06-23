@@ -1,16 +1,16 @@
-function MainController($http) {
+function MainController(UserService) {
   var ctrl = this;
-  var API = '//jsonplaceholder.typicode.com/users/';
+
   this.userId = '';
   this.chosenUser = {};
   this.getUser = function() {
     if(!this.userId) {
       return;
     }
-    $http
-      .get(API + this.userId)
+    UserService
+      .getUser(this.userId)
       .then(function(response) {
-        ctrl.chosenUser = response.data;
+        ctrl.chosenUser = response;
       }, function(response) {
         console.log(response);
       })
