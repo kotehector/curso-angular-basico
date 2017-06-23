@@ -18,14 +18,9 @@
 
     <div ng-controller="MainController as main">
 
-      <form ng-submit="main.getUser()">
-        <input type="text" ng-model="main.userId">
-        <button type="submit">Buscar</button>
-      </form>
-      <pre>{{ main.chosenUser | json }}</pre>
+        <input type="text" stretch>
+
     </div>
-
-
 
 
     <!-- inject:js -->
@@ -33,7 +28,7 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/user.service.js"></script>
+    <script src="app/stretch.directive.js"></script>
     <script src="app/MainController.js"></script>
     <!-- endinject -->
   </body>
