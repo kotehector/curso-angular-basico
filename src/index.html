@@ -14,13 +14,13 @@
 
   <body class="app">
 
-    <h1>Servicios y Factorias</h1>
+    <h1>Templates con Directivas y Controladores (components)</h1>
 
-    <div ng-controller="MainController as main">
+    <counter></counter>
 
-        <input type="text" stretch>
+    <counter></counter>
 
-    </div>
+    <counter></counter>
 
 
     <!-- inject:js -->
@@ -28,8 +28,8 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/stretch.directive.js"></script>
-    <script src="app/MainController.js"></script>
+    <script src="app/counter.directive.js"></script>
+    <script src="app/CounterController.js"></script>
     <!-- endinject -->
   </body>
 </html>
