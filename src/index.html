@@ -16,18 +16,19 @@
 
     <h1>Templates con Directivas y Controladores (components)</h1>
 
-    <counter></counter>
+    <div ng-controller="OrderController as order">
+        <h1>{{ order.orderQuantity }}</h1>
+        <counter name="{{ order.name }}" count="order.orderQuantity"></counter>
+    </div>
 
-    <counter></counter>
-
-    <counter></counter>
-
+    <counter name="Pepsi" count=2></counter>
 
     <!-- inject:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
+    <script src="app/OrderController.js"></script>
     <script src="app/counter.directive.js"></script>
     <script src="app/CounterController.js"></script>
     <!-- endinject -->
