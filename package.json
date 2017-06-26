@@ -1,13 +1,13 @@
 {
-  "name": "curso-angular-fundamentals",
+  "name": "curso-angular-basico",
   "version": "1.0.0",
   "author": "@kotehector",
-  "description": "Curso Angular Fundamentals",
+  "description": "Curso Angular Basico",
   "scripts": {
     "dev": "lite-server"
   },
   "license": "MIT",
-  "repository": "https://github.com/kotehector",
+  "repository": "https://github.com/kotehector/curso-angular-basico",
   "devDependencies": {
     "angular-mocks": "^1.5.8",
     "del": "^2.2.1",
