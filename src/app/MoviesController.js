@@ -7,7 +7,7 @@ function MoviesController() {
       title: this.newTitle,
       year: this.newDate
     });
-    thi
+    
   }
   this.addToLikes = function(movie) {
       this.likesList.push(movie);
