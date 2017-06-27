@@ -14,11 +14,12 @@
 
   <body class="app">
 
-    <h1>Templates con Directivas y Controladores (components)</h1>
+    <h1>Binding Models to forms</h1>
 
     <div ng-controller="OrderController as order">
-        <h1>{{ order.orderQuantity }}</h1>
-        <counter name="{{ order.name }}" count="order.orderQuantity"></counter>
+        <order-form data="order.customerOrder"
+                    submit="order.submitOrder();">
+        </order-form>
     </div>
 
     <counter name="Pepsi" count=2></counter>
@@ -29,8 +30,8 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
     <script src="app/OrderController.js"></script>
-    <script src="app/counter.directive.js"></script>
-    <script src="app/CounterController.js"></script>
+    <script src="app/order-form.directive.js"></script>
+    <script src="app/OrderFormController.js"></script>
     <!-- endinject -->
   </body>
 </html>
