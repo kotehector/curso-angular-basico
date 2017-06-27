@@ -14,24 +14,26 @@
 
   <body class="app">
 
-    <h1>ng-disabled</h1>
+    <h1>Rutas y vistas con ui-router</h1>
 
-    <div ng-controller="OrderController as order">
-        <order-form data="order.customerOrder"
-                    submit="order.submitOrder();">
-        </order-form>
-    </div>
+    <ul>
+      <li>
+        <a ui-sref="home">Home</a>
+      </li>
+      <li>
+        <a ui-sref="about">About</a>
+      </li>
+    </ul>
 
-    <counter name="Pepsi" count=2></counter>
+    <ui-view></ui-view>
 
     <!-- inject:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="app/app.js"></script>
-    <script src="app/OrderController.js"></script>
-    <script src="app/order-form.directive.js"></script>
-    <script src="app/OrderFormController.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/HomeController.js"></script>
+    <script src="app/AboutController.js"></script>
     <!-- endinject -->
   </body>
 </html>
