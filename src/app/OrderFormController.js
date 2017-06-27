@@ -12,7 +12,8 @@ function OrderFormController() {
     id: '3'
   }];
 
-  ctrl.onSubmit = function() {
+  ctrl.onSubmit = function(data) {
+    console.log(data);  
     // Antes de enviar podemos procesar el Objeto.
     this.submit();
   }
