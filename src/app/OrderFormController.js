@@ -12,9 +12,9 @@ function OrderFormController() {
     id: '3'
   }];
 
-  ctrl.onSubmit = function(data) {
-    console.log(data);  
+  ctrl.onSubmit = function() {
     // Antes de enviar podemos procesar el Objeto.
+    console.log(ctrl.data);
     this.submit();
   }
 }

@@ -10,7 +10,7 @@ function orderForm() {
     template: `
       <pre>{{ orderForm | json }}</pre>
       <pre>{{ form.data | json }}</pre>
-      <form name="orderForm" novalidate ng-submit="form.onSubmit(form.data);">
+      <form name="orderForm" novalidate ng-submit="form.onSubmit();">
         <input name="name"
                type='text'
                placeholder='Nombre'
@@ -32,7 +32,8 @@ function orderForm() {
           <option>Tu ciudad</option>
         </select>
         <textarea name="comments" placeholder='Tu mensaje (opcional)' ng-model="form.data.comments"></textarea>
-        <button type="submit"> Pedir </button>
+        <button type="submit"
+                ng-disabled="orderForm.$invalid"> Pedir </button>
       </form>
     `
   }

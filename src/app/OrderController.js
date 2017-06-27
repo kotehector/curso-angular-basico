@@ -14,7 +14,7 @@ function OrderController() {
 
   ctrl.submitOrder = function() {
     //Comunicación con la API del Back-end
-    console.log("Orden Pedida!");
+    console.log("Orden Pedida!", this.customerOrder);
   }
 }
 
